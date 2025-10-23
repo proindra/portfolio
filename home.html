@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Playwrite+AU+QLD:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="logos/logo.svg" alt="other">
+        <nav class="navbar">
+            <ul class="list">
+                <li><a class="links" href="home.html">Home</a></li>
+                <li><a class="links" href="pages/about.html">About</a></li>
+                <li><a class="links" href="pages/projects.html">Projects</a></li>
+                <li><a class="links" href="pages/social.html">Social Media</a></li>
+                <li><a class="links" href="pages/contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a class="links" href="#">Vibe X ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://proindra.github.io/vibexpdfmerger/" target="_blank">PDF Merger</a></li>
+                        <li><a href="https://proindra.github.io/vibexmarkdowneditor/" target="_blank">Markdown Editor</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="intro">
+            <div class="left-intro">
+                <div class="one">Welcome to my World</div>
+                <div class="two">I'm a &lt;<b>title.</b><span class="auto-type"></span>... /&gt;</div>
+                <script>
+                    var typed = new Typed('.auto-type', {
+                        strings: ['Programmer', 'Developer', 'Designer', 'Creator'],
+                        typeSpeed: 100,
+                        backSpeed: 100,
+                        loop: true
+                    });
+                </script>
+                <button class="btn">Download Resume</button>
+                <a href="https://github.com/proindra" target="_blank"><button class="btn">Visit Github</button></a>
+            </div>
+
+            <div class="right-intro">
+                <img src="logos/main.png" alt="other">
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>PRAJWALINDRA</h3>
+                <p>proindra</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="pages/about.html">About</a></li>
+                    <li><a href="pages/projects.html">Projects</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="https://github.com/proindra" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/prajwalindra-h-7b2841319/" target="_blank">LinkedIn</a>
+                    <a href="#" target="_blank">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 proindra. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
