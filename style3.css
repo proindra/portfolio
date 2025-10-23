@@ -1,6 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden; /* ADDED: Prevents horizontal scroll on html */
 }
 
 header {
@@ -8,13 +13,13 @@ header {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-around;
-
-
+    width: 100%; /* ADDED: Ensures header doesn't overflow */
+    max-width: 100vw; /* ADDED: Limits to viewport width */
 }
 
 body {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background:
         linear-gradient(rgba(0, 255, 0, 0.1) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0, 255, 0, 0.1) 1px, transparent 1px),
@@ -28,6 +33,7 @@ body {
     background-attachment: fixed, fixed, scroll;
     animation: gradientFlow 15s ease infinite;
     overflow-x: hidden;
+    max-width: 100vw; /* ADDED: Prevents body from exceeding viewport */
 }
 
 @keyframes gradientFlow {
@@ -52,11 +58,11 @@ body {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-size: 19px;
-
 }
 
 .logo {
     width: 150px;
+    max-width: 150px; /* ADDED: Prevents logo from growing */
     padding: 5px;
     cursor: pointer;
 }
@@ -67,6 +73,8 @@ body {
     justify-content: space-around;
     padding: 100px;
     margin: 23px 0;
+    width: 100%; /* ADDED */
+    max-width: 100vw; /* ADDED: Prevents overflow */
 }
 
 .one {
@@ -74,23 +82,28 @@ body {
     font-family: "Roboto", sans-serif;
     color: yellow;
     font-weight: bolder;
+    word-wrap: break-word;
+    overflow-wrap: break-word; /* ADDED: Additional wrapping */
+    hyphens: auto; /* ADDED: Allows hyphenation */
 }
 
 .two {
     font-size: 40px;
     font-family: "Roboto", sans-serif;
     color: white;
+    word-wrap: break-word;
+    overflow-wrap: break-word; /* ADDED */
 }
 
 .links {
     text-decoration: none;
     color: #898989;
     position: relative;
+    white-space: nowrap; /* ADDED: Prevents link text from breaking */
 }
 
 .links:hover {
     color: white;
-    ;
     cursor: pointer;
     opacity: 1;
 }
@@ -105,7 +118,6 @@ body {
     bottom: -6px;
     opacity: 0;
     transition: all 0.3s ease;
-    ;
     pointer-events: none;
 }
 
@@ -147,14 +159,13 @@ body {
     color: yellow;
 }
 
-
 .auto-type {
     color: yellowgreen;
     font-weight: bold;
 }
 
 b {
-    color: rgb(14, 185, 237)
+    color: rgb(14, 185, 237);
 }
 
 .btn {
@@ -164,23 +175,37 @@ b {
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    /* display: inline-block; */
     font-size: 16px;
     margin: 25px 2px;
     cursor: pointer;
     border-radius: 3px;
     border: 2px solid yellow;
-
+    max-width: 100%; /* ADDED: Prevents button overflow */
 }
 
 .right-intro {
     width: 50%;
     text-align: center;
+    max-width: 100%; /* ADDED */
+}
+
+.right-intro img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* ADDED: Removes inline spacing */
+    margin: 0 auto; /* ADDED: Centers image */
 }
 
 .left-intro {
     width: 50%;
     text-align: center;
+    max-width: 100%; /* ADDED */
+}
+
+main {
+    width: 100%; /* ADDED */
+    max-width: 100vw; /* ADDED */
+    overflow-x: hidden; /* ADDED */
 }
 
 footer {
@@ -189,6 +214,8 @@ footer {
     padding: 40px 0 20px;
     margin-top: 50px;
     border-top: 1px solid #333;
+    width: 100%; /* ADDED */
+    max-width: 100vw; /* ADDED */
 }
 
 .footer-content {
@@ -204,6 +231,7 @@ footer {
 .footer-section {
     flex: 1;
     min-width: 200px;
+    max-width: 100%; /* ADDED */
 }
 
 .footer-section h3 {
@@ -279,7 +307,6 @@ footer {
     font-size: 14px;
 }
 
-
 @media (max-width: 1200px) {
     .intro {
         display: flex;
@@ -295,8 +322,8 @@ footer {
 }
 
 @media (max-width: 768px) {
-    img {
-        width: 450px;
+    .right-intro img {
+        max-width: 100%;
         height: auto;
     }
 
@@ -311,53 +338,177 @@ footer {
     header {
         flex-direction: column;
         gap: 20px;
-        padding: 20px;
+        padding: 20px 10px; /* CHANGED: Reduced horizontal padding */
     }
 
     .list {
-        gap: 20px;
-        font-size: 18px;
+        gap: 15px; /* CHANGED: Reduced gap */
+        font-size: 16px; /* CHANGED: Reduced font size */
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 5px; /* ADDED */
     }
 
     .intro {
-        padding: 60px 30px;
+        padding: 60px 20px; /* CHANGED: Reduced horizontal padding */
+    }
+
+    /* ADDED: Center footer on tablets and mobile */
+    .footer-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section ul {
+        padding: 0;
+    }
+
+    .social-links {
+        justify-content: center;
     }
 }
 
 @media (max-width: 668px) {
-    img {
-        width: 300px;
+    .right-intro img {
+        max-width: 100%;
+        width: calc(100% - 20px); /* CHANGED: Ensures margin space */
+        height: auto;
     }
 
     .one {
-        font-size: 32px;
+        font-size: 28px;
+        padding: 0 5px; /* CHANGED: Reduced padding */
+        line-height: 1.2; /* ADDED: Tighter line height */
     }
 
     .two {
-        font-size: 20px;
+        font-size: 18px;
+        padding: 0 5px; /* CHANGED: Reduced padding */
+        line-height: 1.3; /* ADDED */
     }
 
     .list {
-        gap: 15px;
-        font-size: 16px;
+        gap: 8px; /* CHANGED: Further reduced */
+        font-size: 13px; /* CHANGED: Smaller font */
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 5px;
     }
 
     .logo {
-        width: 120px;
+        width: 90px; /* CHANGED: Smaller logo */
+        max-width: 90px;
     }
 
     .intro {
-        padding: 40px 20px;
-        gap: 50px;
+        padding: 40px 10px; /* CHANGED: Minimal horizontal padding */
+        gap: 30px; /* CHANGED: Reduced gap */
+        margin: 15px 0; /* CHANGED: Reduced margin */
     }
 
     .btn {
-        padding: 12px 24px;
-        font-size: 14px;
+        padding: 10px 16px; /* CHANGED: Smaller padding */
+        font-size: 12px; /* CHANGED: Smaller font */
+        margin: 10px 5px; /* CHANGED: Reduced margins */
+        max-width: calc(100% - 10px); /* ADDED: Prevents overflow */
     }
 
     .footer-content {
         flex-direction: column;
         gap: 20px;
+        padding: 0 10px;
+        align-items: center; /* ADDED: Centers footer sections */
+        text-align: center; /* ADDED: Centers text */
+    }
+    
+    .footer-section {
+        min-width: unset;
+        padding: 0 5px;
+    }
+    
+    .social-links {
+        justify-content: center; /* ADDED: Centers social links */
+    }
+    
+    footer {
+        padding: 30px 0 15px; /* CHANGED: Reduced padding */
+    }
+}
+
+/* Extra small screens - Critical fix for very narrow widths */
+@media (max-width: 480px) {
+    header {
+        padding: 15px 5px; /* CHANGED: Minimal padding */
+    }
+
+    .list {
+        gap: 5px; /* CHANGED: Minimal gap */
+        font-size: 11px; /* CHANGED: Very small font */
+    }
+
+    .one {
+        font-size: 22px; /* CHANGED: Smaller */
+        padding: 0 5px;
+    }
+
+    .two {
+        font-size: 14px; /* CHANGED: Smaller */
+        padding: 0 5px;
+    }
+
+    .intro {
+        padding: 30px 5px; /* CHANGED: Minimal padding */
+        gap: 20px;
+    }
+
+    .right-intro img {
+        width: calc(100% - 10px); /* CHANGED: Very tight margins */
+        max-width: 250px;
+    }
+
+    .btn {
+        padding: 8px 12px;
+        font-size: 11px;
+        margin: 8px 3px;
+    }
+
+    .logo {
+        width: 80px;
+        max-width: 80px;
+    }
+}
+
+/* Ultra small screens - For widths below 320px */
+@media (max-width: 320px) {
+    .one {
+        font-size: 18px;
+    }
+
+    .two {
+        font-size: 12px;
+    }
+
+    .list {
+        font-size: 10px;
+        gap: 3px;
+    }
+
+    .intro {
+        padding: 20px 3px; /* CHANGED: Ultra minimal */
+    }
+
+    .btn {
+        padding: 6px 10px;
+        font-size: 10px;
+    }
+
+    .logo {
+        width: 70px;
+        max-width: 70px;
+    }
+
+    .right-intro img {
+        width: calc(100% - 6px);
+        max-width: 200px;
     }
 }
