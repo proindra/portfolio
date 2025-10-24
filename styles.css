@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 header {
     display: flex;
     flex-direction: row-reverse;
@@ -280,7 +284,7 @@ footer {
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
     .intro {
         display: flex;
         flex-direction: column-reverse;
@@ -324,7 +328,7 @@ footer {
     }
 }
 
-@media (max-width: 668px) {
+@media (max-width: 714px) {
     img {
         width: 300px;
     }
@@ -339,7 +343,7 @@ footer {
 
     .list {
         gap: 15px;
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .logo {
@@ -358,6 +362,9 @@ footer {
 
     .footer-content {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
         gap: 20px;
     }
 }
+
