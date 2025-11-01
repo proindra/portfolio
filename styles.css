@@ -7,14 +7,7 @@ html{
     overflow-x: hidden;
 }
 
-header {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-around;
 
-
-}
 
 body {
     width: 100%;
@@ -36,22 +29,9 @@ body {
     }
 }
 
-.list {
-    display: flex;
-    gap: 40px;
-    list-style-type: none;
-    color: white;
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 19px;
 
-}
 
-.logo {
-    width: 150px;
-    padding: 5px;
-    cursor: pointer;
-}
+
 
 .intro {
     display: flex;
@@ -74,70 +54,23 @@ body {
     color: white;
 }
 
-.links {
-    text-decoration: none;
-    color: #898989;
-    position: relative;
-}
 
-.links:hover {
-    color: white;
-    ;
-    cursor: pointer;
-    opacity: 1;
-}
 
-.links::after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    background-color: yellow;
-    width: 100%;
-    left: 0;
-    bottom: -6px;
-    opacity: 0;
-    transition: all 0.3s ease;
-    ;
-    pointer-events: none;
-}
 
-.links:hover::after {
-    opacity: 1;
-}
 
-.dropdown {
-    position: relative;
-}
 
-.dropdown-menu {
-    position: absolute;
-    background-color: #0a0a0a;
-    border: 1px solid #333;
-    border-radius: 3px;
-    list-style: none;
-    min-width: 155px;
-    opacity: 0;
-    transition: all 0.3s ease;
-    z-index: 1000;
-}
 
-.dropdown:hover .dropdown-menu {
-    opacity: 1;
-}
 
-.dropdown-menu li a {
-    display: block;
-    padding: 10px 15px;
-    color: #898989;
-    text-decoration: none;
-    font-size: 16px;
-    transition: all 0.3s ease;
-}
 
-.dropdown-menu li a:hover {
-    background-color: rgba(255, 255, 0, 0.1);
-    color: yellow;
-}
+
+
+
+
+
+
+
+
+
 
 
 .auto-type {
@@ -312,16 +245,7 @@ footer {
         font-size: 25px;
     }
 
-    header {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-    }
 
-    .list {
-        gap: 20px;
-        font-size: 18px;
-    }
 
     .intro {
         padding: 60px 30px;
@@ -341,14 +265,7 @@ footer {
         font-size: 16px;
     }
 
-    .list {
-        gap: 15px;
-        font-size: 12px;
-    }
 
-    .logo {
-        width: 120px;
-    }
 
     .intro {
         /* padding: 40px 20px; */
@@ -371,16 +288,7 @@ footer {
 }
 
 @media (max-width: 700px) {
-    .list {
-        flex-direction: column;
-        gap: 10px;
-        font-size: 16px;
-        text-align: center;
-    }
 
-    .logo {
-        width: 100px;
-    }
 
     .intro {
         padding: 30px 15px;
