@@ -7,7 +7,6 @@ header {
     padding: clamp(8px, 1.5vw, 15px) clamp(15px, 3vw, 35px);
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 0, 0.2);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -114,18 +113,6 @@ header {
         flex-direction: column;
         gap: clamp(8px, 1vw, 12px);
         padding: clamp(6px, 1vw, 10px) clamp(15px, 3vw, 35px);
-    }
-}
-
-@media (max-width: 830px) {
-    header {
-        padding: clamp(4px, 0.8vw, 8px) clamp(15px, 3vw, 35px);
-        gap: clamp(4px, 0.6vw, 8px);
-    }
-
-    .list {
-        gap: clamp(6px, 1vw, 10px);
-        padding: clamp(4px, 0.8vw, 8px);
     }
 }
 
