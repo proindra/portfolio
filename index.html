@@ -12,6 +12,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Latest version -->
+    <script src="https://cdn.jsdelivr.net/gh/proindra/scrollcarousel.js/scrollcarousel.js"></script>
     <style>
 
     </style>
@@ -31,7 +33,8 @@
                     <a class="links" href="#">Vibe X ▼</a>
                     <ul class="dropdown-menu">
                         <li><a href="https://proindra.github.io/vibexpdfmerger/" target="_blank">PDF Merger</a></li>
-                        <li><a href="https://proindra.github.io/vibexmarkdowneditor/" target="_blank">Markdown Editor</a></li>
+                        <li><a href="https://proindra.github.io/vibexmarkdowneditor/" target="_blank">Markdown
+                                Editor</a></li>
                     </ul>
                 </li>
             </ul>
@@ -60,6 +63,40 @@
                 <img src="logos/main.png" alt="other">
             </div>
 
+        </section>
+        <section class="scroll">
+            <div id="myCarousel"></div>
+
+            <script>
+                var carousel = new ScrollCarousel('#myCarousel', {
+                    cardBackground: 'linear-gradient(135deg, rgba(255,255,0,0.1), rgba(14,185,237,0.1))',
+                    backgroundColor: 'transparent',
+                    fontWeight: 'bold',
+                    fontSize: '20px',
+                    pauseOnHover: true,
+                    direction: 'normal',
+                    cardHeight: 60,
+                    cardWidth: 200,
+                    gap: 15,
+                    speed: 15,
+                    borderRadius: '8px',
+                    border: '1px solid rgba(255,255,0,0.3)',
+                    items: [
+                        { type: 'text', content: '🚀 Innovation' },
+                        { type: 'text', content: '💡 Creativity' },
+                        { type: 'text', content: '🎯 Focus' },
+                        { type: 'text', content: '⚡ Performance' },
+                        { type: 'text', content: '🔧 Development' },
+                        { type: 'text', content: '🎨 Design' },
+                        { type: 'text', content: '📱 Responsive' },
+                        { type: 'text', content: '🌟 Excellence' },
+                        { type: 'text', content: '🔥 Passion' },
+                        { type: 'text', content: '💻 Coding' },
+                        { type: 'text', content: '🎪 Fun' },
+                        { type: 'text', content: '🚀 Innovation' }
+                    ]
+                });
+            </script>
         </section>
     </main>
     <footer>

@@ -19,19 +19,7 @@ header {
 body {
     width: 100%;
     height: 100vh;
-    background:
-        linear-gradient(rgba(0, 255, 0, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 255, 0, 0.1) 1px, transparent 1px),
-        linear-gradient(-45deg, #000000, #0f0f0f, #002200, #001100);
-
-    background-size:
-        40px 40px,
-        40px 40px,
-        400% 400%;
-
-    background-attachment: fixed, fixed, scroll;
-    animation: gradientFlow 15s ease infinite;
-    overflow-x: hidden;
+    background:black
 }
 
 @keyframes gradientFlow {
@@ -284,21 +272,33 @@ footer {
 }
 
 
-@media (max-width: 1600px) {
-    .intro {
+@media (max-width: 1600px)
+ {
+    /* .intro {
         display: flex;
         flex-direction: column-reverse;
         gap: 70px;
         padding: 80px 40px;
+    } */
+
+    .one{
+        font-size: 40px;
+    }
+    img{
+        width: 500px;
+        height: auto;
+    }
+    .two{
+        font-size: 25px;
     }
 
-    .left-intro,
-    .right-intro {
-        width: 100%;
+    .btn{
+        padding: 12px 24px;
+        font-size: 14px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1180px) {
     img {
         width: 450px;
         height: auto;
@@ -328,17 +328,17 @@ footer {
     }
 }
 
-@media (max-width: 714px) {
+@media (max-width: 980px) {
     img {
         width: 300px;
     }
 
     .one {
-        font-size: 32px;
+        font-size: 25px;
     }
 
     .two {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .list {
@@ -351,8 +351,10 @@ footer {
     }
 
     .intro {
-        padding: 40px 20px;
+        /* padding: 40px 20px; */
+        flex-direction: column-reverse;
         gap: 50px;
+    
     }
 
     .btn {
@@ -368,3 +370,63 @@ footer {
     }
 }
 
+@media (max-width: 700px) {
+    .list {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .intro {
+        padding: 30px 15px;
+        gap: 30px;
+    }
+
+    .one {
+        font-size: 20px;
+    }
+
+    .two {
+        font-size: 14px;
+    }
+
+    .right-intro {
+        width: 100%;
+        text-align: center;
+    }
+
+    img {
+        width: 250px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 12px;
+        margin: 15px 5px;
+    }
+
+    .footer-content {
+        padding: 0 15px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+.scroll {
+    margin: 50px 0;
+    padding: 20px 0;
+}
+
+#myCarousel {
+    margin: 0 auto;
+    max-width: 100%;
+}
