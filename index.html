@@ -12,6 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="scroll-indicator.css">
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- Latest version -->
     <script src="https://cdn.jsdelivr.net/gh/proindra/scrollcarousel.js/scrollcarousel.js"></script>
@@ -62,6 +63,11 @@
 
             <div class="right-intro">
                 <img src="logos/main.png" alt="other">
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="scroll-arrow">↓</div>
+                <p>Scroll Down</p>
             </div>
 
         </section>
@@ -131,3 +137,18 @@
 </body>
 
 </html>
+<script>
+// Scroll reveal animation
+window.addEventListener('scroll', () => {
+    const scrollElements = document.querySelectorAll('.scroll, footer');
+    
+    scrollElements.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+            el.classList.add('visible');
+        }
+    });
+});
+</script>

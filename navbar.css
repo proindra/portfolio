@@ -4,7 +4,7 @@ header {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
-    padding: clamp(10px, 2vw, 20px) clamp(20px, 5vw, 50px);
+    padding: clamp(8px, 1.5vw, 15px) clamp(15px, 3vw, 35px);
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 0, 0.2);
@@ -17,19 +17,19 @@ header {
 
 .list {
     display: flex;
-    gap: clamp(15px, 3vw, 30px);
+    gap: clamp(12px, 2vw, 25px);
     list-style-type: none;
     color: white;
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
-    font-size: clamp(14px, 1.5vw, 18px);
+    font-size: clamp(13px, 1.2vw, 16px);
     align-items: center;
 }
 
 .logo {
-    width: clamp(100px, 12vw, 150px);
+    width: clamp(80px, 10vw, 120px);
     height: auto;
-    padding: 5px;
+    padding: 3px;
     cursor: pointer;
     max-width: 100%;
 }
@@ -38,8 +38,8 @@ header {
     text-decoration: none;
     color: #c0c0c0;
     position: relative;
-    padding: clamp(6px, 1vw, 10px) clamp(12px, 2vw, 16px);
-    border-radius: 6px;
+    padding: clamp(4px, 0.8vw, 8px) clamp(8px, 1.5vw, 12px);
+    border-radius: 4px;
     transition: all 0.3s ease;
     white-space: nowrap;
 }
