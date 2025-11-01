@@ -117,6 +117,18 @@ header {
     }
 }
 
+@media (max-width: 830px) {
+    header {
+        padding: clamp(4px, 0.8vw, 8px) clamp(15px, 3vw, 35px);
+        gap: clamp(4px, 0.6vw, 8px);
+    }
+
+    .list {
+        gap: clamp(6px, 1vw, 10px);
+        padding: clamp(4px, 0.8vw, 8px);
+    }
+}
+
 @media (max-width: 768px) {
     .navbar {
         width: 100%;
